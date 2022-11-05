@@ -1,4 +1,5 @@
 /* eslint-disable linebreak-style */
+
 const { nanoid } = require('nanoid');
 const notes = require('./notes');
 
@@ -14,8 +15,7 @@ const addNoteHandler = (request, h) => {
   };
 
   notes.push(newNote);
-  console.log(newNote);
-  console.log(notes);
+
   const isSuccess = notes.filter((note) => note.id === id).length > 0;
 
   if (isSuccess) {
